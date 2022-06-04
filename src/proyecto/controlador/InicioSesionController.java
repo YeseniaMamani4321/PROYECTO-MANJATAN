@@ -54,9 +54,7 @@ public class InicioSesionController implements Initializable {
                 principal.close();
             }
         }
-        else{
-            
-        }
+        
     }    
     
     @FXML
@@ -81,12 +79,15 @@ public class InicioSesionController implements Initializable {
                } 
                else{
                        administrador=null;
+                       
                        }
             }
             if(administrador==null){
-                libreria.MostrarInformacion("No se encontro al administrador");
+                libreria.MostrarInformacion("Usuario o contraseña incorrectos");
             }else{
-                principal.close();
+                AbridorVentanas<MenuPrincipalController> abridorVentanas=new AbridorVentanas<>("/proyecto/vista/MenuPrincipal.fxml");
+                abridorVentanas.abrirVentana("Menu Principal");
+                //principal.close();
             }
             
         

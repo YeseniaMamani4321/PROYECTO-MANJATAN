@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="951.0" prefWidth="1307.0" style="-fx-background-color: #353354;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="202.0" layoutY="57.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="721.0" text="BOUTIQUE ALEX PLACE " textFill="WHITE" AnchorPane.bottomAnchor="595.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="91.0" AnchorPane.topAnchor="57.0">
+         <font>
+            <Font name="Forte" size="64.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="186.0" fitWidth="268.0" layoutX="-35.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@folder/playboy-logo-blanco_Mesa-de-trabajo-1_1.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="2.0" layoutY="193.0" prefHeight="566.0" prefWidth="1014.0" style="-fx-background-color: #252440;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="193.0">
+         <children>
+            <TabPane layoutX="-3.0" prefHeight="559.0" prefWidth="736.0" style="-fx-background-color: #2d2c55;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="REGISTRAR ADMINISTRADOR">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="7.0" prefHeight="725.0" prefWidth="798.0">
+                                 <children>
+                                    <Label layoutX="62.0" layoutY="105.0" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="63.0" layoutY="144.0" text="CARNET " textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="60.0" layoutY="211.0" text="NOMBRE" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="60.0" layoutY="277.0" text="TELEFONO" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="62.0" layoutY="349.0" text="DIRECCIÓN" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="60.0" layoutY="414.0" text="CONTRASEÑA" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="229.0" layoutY="46.0" text="REGISTRO ADMINISTRADOR" textFill="WHITE">
+                                       <font>
+                                          <Font size="27.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="312.0" layoutY="557.0" mnemonicParsing="false" text="REGISTRAR ADMINISTRADOR" />
+                                    <TextField layoutX="268.0" layoutY="151.0" prefHeight="25.0" prefWidth="437.0" />
+                                    <TextField layoutX="268.0" layoutY="218.0" prefHeight="25.0" prefWidth="437.0" />
+                                    <TextField layoutX="268.0" layoutY="284.0" prefHeight="25.0" prefWidth="437.0" />
+                                    <TextField layoutX="268.0" layoutY="356.0" prefHeight="25.0" prefWidth="437.0" />
+                                    <TextField layoutX="268.0" layoutY="421.0" prefHeight="25.0" prefWidth="437.0" />
+                                    <Button contentDisplay="GRAPHIC_ONLY" layoutX="708.0" layoutY="406.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="81.0" style="-fx-background-color: #2d2c55;">
+                                       <graphic>
+                                          <ImageView accessibleRole="BUTTON" fitHeight="43.0" fitWidth="72.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@folder/6405909.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content></Tab>
+                <Tab closable="false" text="MODIFICAR ADMINISTRADOR">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="531.0" prefWidth="762.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TabPane layoutX="8.0" prefHeight="529.0" prefWidth="762.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <tabs>
+                                        <Tab text="CARNET">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label alignment="TOP_CENTER" layoutX="-23.0" layoutY="45.0" text="INGRESE CARNET DEL ADMINISTRADOR" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="417.0" AnchorPane.leftAnchor="-23.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="45.0">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER" layoutX="65.0" layoutY="200.0" text="INGRESE NUEVO CARNET" textFill="WHITE" AnchorPane.bottomAnchor="262.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="141.0" AnchorPane.topAnchor="200.0">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField alignment="CENTER" layoutX="240.0" layoutY="126.0" prefHeight="36.0" prefWidth="242.0" />
+                                                      <TextField alignment="CENTER" layoutX="240.0" layoutY="392.0" prefHeight="36.0" prefWidth="242.0" />
+                                                      <Button alignment="CENTER" layoutX="305.0" layoutY="496.0" mnemonicParsing="false" text=" ACTUALIZAR CARNET" />
+                                                   </children>
+                                                </AnchorPane>
+                                          </content>
+                                        </Tab>
+                                        <Tab text="NOMBRE">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="203.0" layoutY="288.0" prefHeight="34.0" prefWidth="339.0" text="INGRESE NUEVO NOMBRE" textFill="WHITE" AnchorPane.bottomAnchor="369.0" AnchorPane.leftAnchor="203.0" AnchorPane.rightAnchor="256.0" AnchorPane.topAnchor="288.0">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="242.0" layoutY="87.0" text="INGRESE SU NOMBRE" textFill="WHITE" AnchorPane.bottomAnchor="570.0" AnchorPane.leftAnchor="242.0" AnchorPane.rightAnchor="294.0" AnchorPane.topAnchor="87.0">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="283.0" layoutY="172.0" prefHeight="37.0" prefWidth="179.0" />
+                                                      <TextField layoutX="279.0" layoutY="395.0" prefHeight="38.0" prefWidth="187.0" />
+                                                      <Button layoutX="308.0" layoutY="516.0" mnemonicParsing="false" text="ACTULIZAR NOMBRE" />
+                                                   </children></AnchorPane>
+                                          </content>
+                                        </Tab>
+                                          <Tab text="TELEFONO">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Button layoutX="300.0" layoutY="530.0" mnemonicParsing="false" text="ACTUALIZAR TELEFONO" />
+                                                      <Label layoutX="233.0" layoutY="68.0" text="INGRESE SU TELEFONO" textFill="WHITE" AnchorPane.bottomAnchor="589.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="285.0" AnchorPane.topAnchor="68.0">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="180.0" layoutY="297.0" prefHeight="39.0" prefWidth="388.0" text="INGRESE SU NUEVO TELEFONO" textFill="WHITE" AnchorPane.bottomAnchor="360.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="267.0" AnchorPane.topAnchor="297.0">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="288.0" layoutY="148.0" prefHeight="39.0" prefWidth="172.0" />
+                                                      <TextField layoutX="287.0" layoutY="384.0" prefHeight="38.0" prefWidth="172.0" />
+                                                   </children></AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab text="DIRECCION">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="275.0" layoutY="69.0" text="INGRESE DIRECCIÓN" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="228.0" layoutY="281.0" text="INGRESE NUEVA DIRECCIÓN" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button layoutX="326.0" layoutY="535.0" mnemonicParsing="false" text="ACTUALIZAR DIRECCIÓN" />
+                                                      <TextField layoutX="315.0" layoutY="192.0" prefHeight="37.0" prefWidth="170.0" />
+                                                      <TextField layoutX="310.0" layoutY="369.0" prefHeight="38.0" prefWidth="178.0" />
+                                                   </children></AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab text="CONTRASEÑA">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextField layoutX="276.0" layoutY="145.0" prefHeight="34.0" prefWidth="194.0" />
+                                                      <TextField layoutX="276.0" layoutY="297.0" prefHeight="36.0" prefWidth="194.0" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="328.0" AnchorPane.topAnchor="297.0" />
+                                                      <Label layoutX="212.0" layoutY="65.0" text="INGRESE SU CONTRASEÑA" textFill="WHITE" AnchorPane.bottomAnchor="592.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="264.0" AnchorPane.topAnchor="65.0">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button layoutX="291.0" layoutY="489.0" mnemonicParsing="false" text="ACTUALIZAR CONTRASEÑA" />
+                                                      <Label layoutX="165.0" layoutY="207.0" text="INGRESE SU NUEVA CONTRASEÑA" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button contentDisplay="GRAPHIC_ONLY" layoutX="470.0" layoutY="284.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="86.0" style="-fx-background-color: #2d2c55;">
+                                                         <graphic>
+                                                            <ImageView accessibleRole="BUTTON" fitHeight="54.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@folder/6405909.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Button contentDisplay="GRAPHIC_ONLY" layoutX="480.0" layoutY="135.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="67.0" style="-fx-background-color: #2d2c55;">
+                                                         <graphic>
+                                                            <ImageView accessibleRole="BUTTON" fitHeight="46.0" fitWidth="51.0">
+                                                               <image>
+                                                                  <Image url="@../../../../../../Downloads/6405909.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children></AnchorPane>
+                                            </content>
+                                          </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="PROVEEDOR ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane layoutY="-2.0" prefHeight="733.0" prefWidth="835.0">
+                                 <top>
+                                    <TabPane prefHeight="700.0" prefWidth="835.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                      <tabs>
+                                        <Tab text="AGREGAR PROVEEDOR">
+                                             <content>
+                                                <AnchorPane prefHeight="541.0" prefWidth="743.0">
+                                                   <children>
+                                                      <Label layoutX="47.0" layoutY="111.0" text="CARNET DEL PROVEEDOR" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="45.0" layoutY="172.0" text="NOMBRE PROVEEDOR" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="47.0" layoutY="228.0" text="APELLIDO PROVEDOR" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="45.0" layoutY="287.0" text="TELEFONO" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="47.0" layoutY="336.0" text="DIRECCIÓN" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="20.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button layoutX="348.0" layoutY="497.0" mnemonicParsing="false" text="AGREGAR PROVEEDOR" />
+                                                      <TextField layoutX="311.0" layoutY="114.0" prefHeight="25.0" prefWidth="462.0" />
+                                                      <TextField layoutX="311.0" layoutY="175.0" prefHeight="25.0" prefWidth="462.0" />
+                                                      <TextField layoutX="311.0" layoutY="231.0" prefHeight="25.0" prefWidth="462.0" />
+                                                      <TextField layoutX="311.0" layoutY="290.0" prefHeight="25.0" prefWidth="461.0" />
+                                                      <TextField layoutX="311.0" layoutY="339.0" prefHeight="25.0" prefWidth="461.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                        <Tab text="MODIFICAR PROVEEDOR">
+                                             <content>
+                                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="780.0" fitWidth="1223.0" layoutX="28.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@folder/WhatsApp%20Image%202022-05-31%20at%208.20.52%20PM.jpeg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <TabPane layoutX="28.0" layoutY="40.0" prefHeight="630.0" prefWidth="781.0" tabClosingPolicy="UNAVAILABLE">
+                                                        <tabs>
+                                                          <Tab text="CARNET">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label layoutX="286.0" layoutY="74.0" text="INGRESE CARNET" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="27.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label layoutX="238.0" layoutY="233.0" text="INGRESE NUEVO CARNET" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="27.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <TextField layoutX="313.0" layoutY="150.0" prefHeight="32.0" prefWidth="157.0" />
+                                                                        <TextField layoutX="316.0" layoutY="306.0" prefHeight="32.0" prefWidth="154.0" />
+                                                                        <Button layoutX="301.0" layoutY="485.0" mnemonicParsing="false" text="CAMBIAR CARNET PROVEEDOR" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                            </content>
+                                                          </Tab>
+                                                          <Tab text="NOMBRE">
+                                                            <content>
+                                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label layoutX="280.0" layoutY="75.0" text="INGRESE NOMBRE" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="27.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label layoutX="231.0" layoutY="306.0" text="INGRESE NUEVO NOMBRE" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="27.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <TextField layoutX="242.0" layoutY="172.0" prefHeight="25.0" prefWidth="298.0" />
+                                                                        <TextField layoutX="241.0" layoutY="392.0" prefHeight="25.0" prefWidth="299.0" />
+                                                                        <Button layoutX="296.0" layoutY="491.0" mnemonicParsing="false" text="CAMBIAR NOMBRE PROVEEDOR" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                            </content>
+                                                          </Tab>
+                                                            <Tab text="APELLIDO">
+                                                              <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label layoutX="276.0" layoutY="43.0" text="INGRESE APELLIDO" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="27.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label layoutX="228.0" layoutY="262.0" text="INGRESE NUEVO APELLIDO" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="27.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <TextField layoutX="253.0" layoutY="143.0" prefHeight="25.0" prefWidth="277.0" />
+                                                                        <TextField layoutX="252.0" layoutY="363.0" prefHeight="25.0" prefWidth="277.0" />
+                                                                        <Button layoutX="324.0" layoutY="454.0" mnemonicParsing="false" text="ACTULIZAR APELLIDO" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                              </content>
+                                                            </Tab>
+                                                            <Tab text="TELEFONO">
+                                                              <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label layoutX="271.0" layoutY="71.0" text="INGRESE TELEFONO" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="27.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <TextField layoutX="252.0" layoutY="152.0" prefHeight="25.0" prefWidth="277.0" />
+                                                                        <TextField layoutX="253.0" layoutY="301.0" prefHeight="25.0" prefWidth="277.0" />
+                                                                        <Label layoutX="222.0" layoutY="221.0" text="INGRESE NUEVO TELEFONO" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="27.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Button layoutX="322.0" layoutY="408.0" mnemonicParsing="false" text="ACTULIZAR TELEFONO" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                              </content>
+                                                            </Tab>
+                                                            <Tab text="DIRECCION">
+                                                              <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label layoutX="221.0" layoutY="271.0" text="INGRESE NUEVA DIRECCIÓN " textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="27.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label layoutX="266.0" layoutY="66.0" text="INGRESE DIRECCION" textFill="WHITE">
+                                                                           <font>
+                                                                              <Font size="27.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <TextField layoutX="226.0" layoutY="151.0" prefHeight="39.0" prefWidth="329.0" />
+                                                                        <TextField layoutX="232.0" layoutY="353.0" prefHeight="39.0" prefWidth="329.0" />
+                                                                        <Button layoutX="320.0" layoutY="461.0" mnemonicParsing="false" text="ACTULIZAR DIRECCIÓN" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                              </content>
+                                                            </Tab>
+                                                        </tabs>
+                                                      </TabPane>
+                                                      <Label layoutX="343.0" layoutY="-5.0" prefHeight="39.0" prefWidth="149.0" text="MODIFICAR" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content></Tab>
+                                          <Tab text="ELIMINAR PROVEEDOR">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="606.0" fitWidth="627.0" layoutX="96.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@folder/WhatsApp%20Image%202022-05-31%20at%208.20.52%20PM.jpeg" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Text fill="WHITE" layoutX="271.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CARNET PROVEEDOR">
+                                                         <font>
+                                                            <Font size="27.0" />
+                                                         </font>
+                                                      </Text>
+                                                      <TextField layoutX="277.0" layoutY="238.0" prefHeight="47.0" prefWidth="230.0" />
+                                                      <Button layoutX="327.0" layoutY="440.0" mnemonicParsing="false" text="BUSCAR PROVEEDOR" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab text="VER LISTA PROVEEDOR">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="615.0" prefWidth="806.0" style="-fx-background-color: #252440;">
+                                                         <children>
+                                                            <TextArea layoutY="-1.0" prefHeight="619.0" prefWidth="809.0" style="-fx-background-color: #252440;" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <Button layoutX="367.0" layoutY="645.0" mnemonicParsing="false" text="MOSTRAR LISTA" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Label layoutX="900.0" layoutY="34.0" text="DATOS ADMINISTRADOR" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="832.0" layoutY="88.0" prefHeight="670.0" prefWidth="500.0">
+               <children>
+                  <Label layoutX="28.0" layoutY="61.0" prefHeight="39.0" prefWidth="97.0" text="CARNET" textFill="#9e9e9e">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="355.0" prefHeight="39.0" prefWidth="119.0" text="DIRECCIÓN" textFill="#9e9e9e">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="250.0" prefHeight="39.0" prefWidth="97.0" text="TELEFONO" textFill="#9e9e9e">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="28.0" layoutY="156.0" prefHeight="39.0" prefWidth="97.0" text="NOMBRE" textFill="#9e9e9e">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="165.0" layoutY="61.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
+                  <Label layoutX="165.0" layoutY="156.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
+                  <Label layoutX="165.0" layoutY="250.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
+                  <Label layoutX="165.0" layoutY="355.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
