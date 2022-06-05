@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.image.ImageView;
@@ -69,21 +70,24 @@ public class GestionAdministradorController implements Initializable {
     @FXML
     private TextField TelefonoRegistro;
     @FXML
+    private TabPane ventana_seleccion;
+    @FXML
     private Tab VentanaModificar;
+    @FXML
+    private Tab VentanaRegistrar;
     @FXML
     private Button botonRegistrar;
     @FXML
     private ImageView vistaContraseñaModificacion;
-
     @FXML
     private ImageView vistaContraseñaRegistro;
-    private boolean VisiblePassword;
     Administrador administrador;
     BaseDeDatos<Administrador> baseDeDatos;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
         UnaryOperator<TextFormatter.Change> filter = change -> {
             String text = change.getText();
 
@@ -159,24 +163,24 @@ public class GestionAdministradorController implements Initializable {
     @FXML
     void RegistrarAdministrador(MouseEvent event
     ) {
-        try{
-        administrador = new Administrador();
-        baseDeDatos = new BaseDeDatos<>(administrador);
-        administrador.setCarnet(CarnetRegistro.getText().toUpperCase());
-        if (vistaContraseñaRegistro.getOpacity() < 1) {
-            System.out.println(ContraseñaRegistro.getPromptText());
-            administrador.setContrasena(ContraseñaRegistro.getPromptText());
-        } else {
-            administrador.setContrasena(ContraseñaRegistro.getText());
-        }
-        administrador.setDireccion(DireccionRegistro.getText());
-        administrador.setNombre(NombreRegistro.getText());
-        administrador.setTelefono(Integer.parseInt(TelefonoRegistro.getText()));
-        baseDeDatos.AgregarObjetoBaseDatos();
-        ActualizarDatosPantalla();
-        VentanaModificar.setDisable(false);
-        botonRegistrar.setDisable(true);
-        }catch(Exception es){
+        try {
+            administrador = new Administrador();
+            baseDeDatos = new BaseDeDatos<>(administrador);
+            administrador.setCarnet(CarnetRegistro.getText().toUpperCase());
+            if (vistaContraseñaRegistro.getOpacity() < 1) {
+                System.out.println(ContraseñaRegistro.getPromptText());
+                administrador.setContrasena(ContraseñaRegistro.getPromptText());
+            } else {
+                administrador.setContrasena(ContraseñaRegistro.getText());
+            }
+            administrador.setDireccion(DireccionRegistro.getText());
+            administrador.setNombre(NombreRegistro.getText());
+            administrador.setTelefono(Integer.parseInt(TelefonoRegistro.getText()));
+            baseDeDatos.AgregarObjetoBaseDatos();
+            ActualizarDatosPantalla();
+            VentanaModificar.setDisable(false);
+            botonRegistrar.setDisable(true);
+        } catch (Exception es) {
             new LibreriaGrafica().MostrarError("llena todos los campos");
         }
     }
@@ -226,6 +230,22 @@ public class GestionAdministradorController implements Initializable {
 
     public void setAdministrador(Administrador administrador) {
         this.administrador = administrador;
+        if (administrador != null) {
+            baseDeDatos=new BaseDeDatos<>(administrador);
+            ActualizarDatosPantalla();
+        }
+    }
+
+    public Tab getVentanaModificar() {
+        return VentanaModificar;
+    }
+
+    public Tab getVentanaRegistrar() {
+        return VentanaRegistrar;
+    }
+
+    public TabPane getVentana_seleccion() {
+        return ventana_seleccion;
     }
 
 }

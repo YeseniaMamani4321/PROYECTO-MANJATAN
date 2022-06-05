@@ -69,7 +69,7 @@ public class InicioSesionController implements Initializable {
     @FXML
     void acceder(MouseEvent event) {
         
-        
+            administradores=bdAdministrador.ListaObjetos();
             Administrador administrador=null;
             for(int n=0; n<administradores.size(); n++){
                 
@@ -87,7 +87,7 @@ public class InicioSesionController implements Initializable {
             }else{
                 AbridorVentanas<MenuPrincipalController> abridorVentanas=new AbridorVentanas<>("/proyecto/vista/MenuPrincipal.fxml");
                 abridorVentanas.abrirVentana("Menu Principal");
-                //principal.close();
+                principal.close();
             }
             
         
