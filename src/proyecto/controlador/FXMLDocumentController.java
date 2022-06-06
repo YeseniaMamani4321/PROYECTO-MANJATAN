@@ -17,36 +17,39 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import proyecto.modelo.BaseDeDatos;
 import proyecto.modelo.Entidades.Administrador;
-import proyecto.vista.AbridorVentanas;
 import proyecto.vista.LibreriaGrafica;
 
 /**
  *
  * @author luisf
  */
-public class InicioSesionController implements Initializable {
+public class FXMLDocumentController implements Initializable {
     LibreriaGrafica libreria;
-    BaseDeDatos<Administrador> bdAdministrador;
-    ArrayList<Administrador> administradores;
-    Administrador admin;
-       
-        
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        admin=new Administrador();
-         bdAdministrador=new BaseDeDatos<Administrador>(admin);
-        administradores=bdAdministrador.ListaObjetos();
         libreria=new LibreriaGrafica();
+    }    
+    
+    @FXML
+    private Button botonAcceder;
+    
+    @FXML
+    private PasswordField contrasenia;
+
+    @FXML
+    private TextField usuario;
+    private Stage principal;
+    @FXML
+    void acceder(MouseEvent event) {
+        Administrador admin=new Administrador();
+        BaseDeDatos<Administrador> bdAdministrador=new BaseDeDatos<Administrador>(admin);
+        ArrayList<Administrador> administradores=bdAdministrador.ListaObjetos();
+        
         if(administradores.isEmpty()){
             libreria.MostrarInformacion("No existe ningun administrador registrado");
             if(libreria.ObtenerConfirmacion("Â¿Desea registrar un nuevo administrador?").get()==ButtonType.OK){
                 //Open to menu for Administrador
-                AbridorVentanas<GestionAdministradorController> abridorVentanas=new AbridorVentanas<>("/proyecto/vista/GestionAdministrador.fxml");
-                abridorVentanas.abrirVentana("Gestion Administrador");
-                if(abridorVentanas.getControlador().getAdministrador()==null){
-                    principal.close();
-                }
             }
             else{
                 libreria.MostrarInformacion("Cerrando sistema");
@@ -54,43 +57,25 @@ public class InicioSesionController implements Initializable {
                 principal.close();
             }
         }
-        
-    }    
-    
-    @FXML
-    private Button botonAcceder;
-    
-    @FXML
-    private PasswordField contraseña;
-
-    @FXML
-    private TextField usuario;
-    private Stage principal;
-    @FXML
-    void acceder(MouseEvent event) {
-        
-            administradores=bdAdministrador.ListaObjetos();
+        else{
             Administrador administrador=null;
             for(int n=0; n<administradores.size(); n++){
                 
                administrador=administradores.get(n);
-               if(administrador.getCarnet().equals(usuario.getText().toUpperCase())&&administrador.getContrasena().equals(contraseña.getText())){
+               if(administrador.getCarnet().equals(usuario.getText().toUpperCase())&&administrador.getContrasena().equals(contrasenia.getText())){
                       n=administradores.size();
                } 
                else{
                        administrador=null;
-                       
                        }
             }
             if(administrador==null){
-                libreria.MostrarInformacion("Usuario o contraseÃ±a incorrectos");
+                libreria.MostrarInformacion("No se encontro al administrador");
             }else{
-                AbridorVentanas<MenuPrincipalController> abridorVentanas=new AbridorVentanas<>("/proyecto/vista/MenuPrincipal.fxml");
-                abridorVentanas.abrirVentana("Menu Principal");
                 principal.close();
             }
             
-        
+        }
         
     }
     

@@ -28,9 +28,9 @@
             </ImageView>
             <AnchorPane layoutX="2.0" layoutY="193.0" prefHeight="566.0" prefWidth="1014.0" style="-fx-background-color: #252440;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="193.0">
                <children>
-                  <TabPane layoutX="-3.0" prefHeight="559.0" prefWidth="736.0" style="-fx-background-color: #2d2c55;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="0.0">
+                  <TabPane fx:id="ventana_seleccion" layoutX="-3.0" prefHeight="559.0" prefWidth="736.0" style="-fx-background-color: #2d2c55;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="0.0">
                     <tabs>
-                      <Tab text="REGISTRAR ADMINISTRADOR">
+                      <Tab fx:id="VentanaRegistrar" text="REGISTRAR ADMINISTRADOR">
                            <content>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>

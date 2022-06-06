@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.input.MouseEvent;
 import proyecto.modelo.BaseDeDatos;
+import proyecto.modelo.Entidades.Proveedor;
 
 /**
  *
@@ -72,9 +73,10 @@ public class VentanaProveedorController implements Initializable{
 
     @FXML
     private TextArea vista_lista_proveedores;
-    //BaseDeDatos<Proveedor> basedeDatos;
+    BaseDeDatos<Proveedor> basedeDatos;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        basedeDatos=new BaseDeDatos<>();
     UnaryOperator<TextFormatter.Change> filter = change -> {
             String text = change.getText();
 
@@ -107,7 +109,15 @@ public class VentanaProveedorController implements Initializable{
 
     @FXML
     void agregarproveedor(MouseEvent event) {
-        
+       Proveedor proveedor_agregable= new Proveedor();
+       proveedor_agregable.setCi(carnet_registro_proveedor.getText());
+       proveedor_agregable.setApellido(apellido_registro_proveedor.getText());
+       proveedor_agregable.setNombre(nombre_registro_proveedor.getText());
+       proveedor_agregable.setGmail(apellido_registro_proveedor.getText());
+       //if(pr)
+       basedeDatos=new BaseDeDatos<>(proveedor_agregable);
+       
+      
     }
 
     @FXML
