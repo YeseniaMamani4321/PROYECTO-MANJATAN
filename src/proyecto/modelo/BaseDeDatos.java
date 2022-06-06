@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package proyecto.modelo;
-//aqui se mejoro algo 
+//aqui se mejoro
 import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
