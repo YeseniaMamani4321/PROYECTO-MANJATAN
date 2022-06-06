@@ -61,7 +61,7 @@ public class InicioSesionController implements Initializable {
     private Button botonAcceder;
     
     @FXML
-    private PasswordField contraseÃ±a;
+    private PasswordField contraseña;
 
     @FXML
     private TextField usuario;
@@ -74,7 +74,7 @@ public class InicioSesionController implements Initializable {
             for(int n=0; n<administradores.size(); n++){
                 
                administrador=administradores.get(n);
-               if(administrador.getCarnet().equals(usuario.getText().toUpperCase())&&administrador.getContrasena().equals(contraseÃ±a.getText())){
+               if(administrador.getCarnet().equals(usuario.getText().toUpperCase())&&administrador.getContrasena().equals(contraseña.getText())){
                       n=administradores.size();
                } 
                else{
