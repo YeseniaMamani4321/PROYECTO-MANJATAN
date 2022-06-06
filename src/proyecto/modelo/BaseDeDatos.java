@@ -24,7 +24,9 @@ public class BaseDeDatos<Objeto> {
 
     Connection conexion;
     Objeto objeto;
-
+    public BaseDeDatos() {
+        conexion=new Conexion().getConnection();
+    }
     public BaseDeDatos(Objeto objeto) {
         this.objeto = objeto;
         conexion=new Conexion().getConnection();
