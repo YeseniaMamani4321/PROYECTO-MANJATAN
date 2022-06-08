@@ -6,52 +6,100 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="692.0" prefWidth="1226.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.controlador.MenuPrincipalController">
+<ScrollPane prefHeight="692.0" prefWidth="1257.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.controlador.MenuPrincipalController">
    <content>
       <AnchorPane id="AnchorPane" prefHeight="901.0" prefWidth="1286.0" style="-fx-background-color: #353354;">
          <children>
-            <ImageView fitHeight="901.0" fitWidth="1101.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="895.0" fitWidth="901.0" layoutX="-20.0" layoutY="-210.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../ProyectoImagenes/WhatsApp%20Image%202022-05-31%20at%208.20.52%20PM.jpeg" />
                </image>
             </ImageView>
-            <Label alignment="TOP_CENTER" layoutX="296.0" layoutY="41.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="721.0" text="BOUTIQUE ALEX PLACE " textFill="WHITE">
-               <font>
-                  <Font name="Forte" size="64.0" />
-               </font>
-            </Label>
-            <Label alignment="TOP_CENTER" layoutX="296.0" layoutY="121.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="721.0" text="menu principal" textFill="WHITE">
-               <font>
-                  <Font name="Forte" size="64.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="301.0" fitWidth="398.0" layoutX="867.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="221.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../ProyectoImagenes/playboy-logo-blanco_Mesa-de-trabajo-1_1.png" />
                </image>
             </ImageView>
-            <Button layoutX="288.0" layoutY="276.0" mnemonicParsing="false" onMouseClicked="#abrir_gestor_administrador" text="ADMINISTRADOR">
+            <Button layoutX="-17.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#abrir_gestor_administrador" prefHeight="152.0" prefWidth="261.0" style="-fx-background-color: #353354;" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#abrir_gestor_administrador" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ProyectoImagenes/70850.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button layoutX="289.0" layoutY="436.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="263.0" text="PRODUCTOS">
+            <Button accessibleRole="IMAGE_VIEW" layoutX="-7.0" layoutY="144.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="261.0" style="-fx-background-color: #353354;" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ProyectoImagenes/925123.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button layoutX="288.0" layoutY="356.0" mnemonicParsing="false" onMouseClicked="#abrir_ventana_proveedores" prefHeight="53.0" prefWidth="265.0" text="PROVEEDORES">
+            <Button layoutX="-17.0" layoutY="480.0" mnemonicParsing="false" onMouseClicked="#abrir_ventana_proveedores" prefHeight="202.0" prefWidth="261.0" style="-fx-background-color: #353354;" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font>
+               <graphic>
+                  <ImageView accessibleRole="BUTTON" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#abrir_ventana_proveedores" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ProyectoImagenes/72109.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Button layoutX="361.0" layoutY="752.0" mnemonicParsing="false" text="SALIR">
                <font>
                   <Font size="27.0" />
                </font>
             </Button>
+          
+                  <Pane fx:id="ventana" layoutX="227.0" layoutY="144.0" prefHeight="534.0" prefWidth="1018.0" style="-fx-background-color: #2d2c55;" />
+            <Pane layoutX="227.0" prefHeight="145.0" prefWidth="1001.0" style="-fx-background-color: #353354;">
+               <children>
+                  <Label alignment="TOP_CENTER" layoutX="151.0" layoutY="7.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="721.0" text="BOUTIQUE ALEX PLACE " textFill="WHITE">
+                     <font>
+                        <Font name="Forte" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutX="140.0" layoutY="38.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="721.0" text="Menu principal" textFill="WHITE">
+                     <font>
+                        <Font name="Forte" size="40.0" />
+                     </font>
+                  </Label>
+                  <Button layoutY="88.0" mnemonicParsing="false" style="-fx-background-color: #2d2c55;" text="PRODUCTOS" textFill="WHITE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="440.0" layoutY="88.0" mnemonicParsing="false" style="-fx-background-color: #2d2c55;" text="PROVEEDOR" textFill="WHITE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="627.0" layoutY="88.0" mnemonicParsing="false" style="-fx-background-color: #2d2c55;" text="SALIR" textFill="WHITE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="191.0" layoutY="88.0" mnemonicParsing="false" style="-fx-background-color: #2d2c55;" text="ADMINISTRADOR" textFill="WHITE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
    </content>

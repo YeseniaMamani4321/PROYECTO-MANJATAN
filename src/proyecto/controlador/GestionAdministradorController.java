@@ -32,7 +32,7 @@ public class GestionAdministradorController implements Initializable {
     private TextField CarnetRegistro;
 
     @FXML
-    private PasswordField ContraseñaRegistro;
+    private PasswordField ContraseÃ±aRegistro;
 
     @FXML
     private Label DatosCarnet;
@@ -53,7 +53,7 @@ public class GestionAdministradorController implements Initializable {
     private TextField NombreRegistro;
 
     @FXML
-    private PasswordField NuevaContraseña;
+    private PasswordField NuevaContraseÃ±a;
 
     @FXML
     private TextField NuevaDireccion;
@@ -78,9 +78,9 @@ public class GestionAdministradorController implements Initializable {
     @FXML
     private Button botonRegistrar;
     @FXML
-    private ImageView vistaContraseñaModificacion;
+    private ImageView vistaContraseÃ±aModificacion;
     @FXML
-    private ImageView vistaContraseñaRegistro;
+    private ImageView vistaContraseÃ±aRegistro;
     Administrador administrador;
     BaseDeDatos<Administrador> baseDeDatos;
 
@@ -115,12 +115,12 @@ public class GestionAdministradorController implements Initializable {
     }
 
     @FXML
-    void ActualizarContraseña(MouseEvent event) {
+    void ActualizarContraseÃ±a(MouseEvent event) {
         try {
-            if (vistaContraseñaModificacion.getOpacity() < 1) {
-                baseDeDatos.ModificarValorBaseDeDatos("contrasena", NuevaContraseña.getPromptText());
+            if (vistaContraseÃ±aModificacion.getOpacity() < 1) {
+                baseDeDatos.ModificarValorBaseDeDatos("contrasena", NuevaContraseÃ±a.getPromptText());
             } else {
-                baseDeDatos.ModificarValorBaseDeDatos("contrasena", NuevaContraseña.getText());
+                baseDeDatos.ModificarValorBaseDeDatos("contrasena", NuevaContraseÃ±a.getText());
             }
 
             ActualizarDatosPantalla();
@@ -167,11 +167,11 @@ public class GestionAdministradorController implements Initializable {
             administrador = new Administrador();
             baseDeDatos = new BaseDeDatos<>(administrador);
             administrador.setCarnet(CarnetRegistro.getText().toUpperCase());
-            if (vistaContraseñaRegistro.getOpacity() < 1) {
-                System.out.println(ContraseñaRegistro.getPromptText());
-                administrador.setContrasena(ContraseñaRegistro.getPromptText());
+            if (vistaContraseÃ±aRegistro.getOpacity() < 1) {
+                System.out.println(ContraseÃ±aRegistro.getPromptText());
+                administrador.setContrasena(ContraseÃ±aRegistro.getPromptText());
             } else {
-                administrador.setContrasena(ContraseñaRegistro.getText());
+                administrador.setContrasena(ContraseÃ±aRegistro.getText());
             }
             administrador.setDireccion(DireccionRegistro.getText());
             administrador.setNombre(NombreRegistro.getText());
@@ -186,15 +186,15 @@ public class GestionAdministradorController implements Initializable {
     }
 
     @FXML
-    void mostrarContraseñaModificacion(MouseEvent event
+    void mostrarContraseÃ±aModificacion(MouseEvent event
     ) {
-        alterarVistaContraseña(vistaContraseñaModificacion, NuevaContraseña);
+        alterarVistaContraseÃ±a(vistaContraseÃ±aModificacion, NuevaContraseÃ±a);
     }
 
     @FXML
-    void mostrarContraseñaRegistro(MouseEvent event
+    void mostrarContraseÃ±aRegistro(MouseEvent event
     ) {
-        alterarVistaContraseña(vistaContraseñaRegistro, ContraseñaRegistro);
+        alterarVistaContraseÃ±a(vistaContraseÃ±aRegistro, ContraseÃ±aRegistro);
 
     }
 
@@ -205,21 +205,21 @@ public class GestionAdministradorController implements Initializable {
         DatosTelefono.setText(administrador.getTelefono() + "");
     }
 
-    public void alterarVistaContraseña(ImageView vista, PasswordField entrada) {
-        String contraseña;
+    public void alterarVistaContraseÃ±a(ImageView vista, PasswordField entrada) {
+        String contraseÃ±a;
 
         if (vista.getOpacity() < 1) {
 
-            contraseña = entrada.getPromptText();
+            contraseÃ±a = entrada.getPromptText();
             if (!entrada.getText().equals("")) {
-                contraseña = entrada.getText();
+                contraseÃ±a = entrada.getText();
             }
-            entrada.setText(contraseña);
+            entrada.setText(contraseÃ±a);
             vista.setOpacity(1);
         } else {
-            contraseña = entrada.getText();
+            contraseÃ±a = entrada.getText();
             entrada.clear();
-            entrada.setPromptText(contraseña);
+            entrada.setPromptText(contraseÃ±a);
             vista.setOpacity(0.4);
         }
     }

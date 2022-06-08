@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import proyecto.modelo.BaseDeDatos;
 import proyecto.modelo.Entidades.Administrador;
 import proyecto.vista.AbridorVentanas;
@@ -19,7 +20,8 @@ import proyecto.vista.AbridorVentanas;
  * @author jhamilr
  */
 public class MenuPrincipalController implements Initializable {
-
+    @FXML
+    private Pane ventana;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -28,7 +30,8 @@ public class MenuPrincipalController implements Initializable {
     @FXML
     void abrir_ventana_proveedores(MouseEvent event) {
         AbridorVentanas<VentanaProveedorController> abrirVentana = new AbridorVentanas<>("/proyecto/vista/VentanaProveedor.fxml");
-        abrirVentana.abrirVentana("proveedores");
+        ventana.getChildren().add(abrirVentana.getFxml());
+        //abrirVentana.abrirVentana("proveedores");
     }
 
     @FXML
@@ -42,7 +45,7 @@ public class MenuPrincipalController implements Initializable {
         Tab ventana_modificar=abridorVentanas.getControlador().getVentanaModificar();
         ventana_modificar.setDisable(false);
         abridorVentanas.getControlador().getVentana_seleccion().getSelectionModel().select(ventana_modificar);
-        abridorVentanas.abrirVentana("Gestion Administrador");
+        ventana.getChildren().add(abridorVentanas.getFxml());
     }
 
 }
