@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #242424;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.controlador.ClientesController">
+   <children>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="600.0" spacing="15.0" VBox.vgrow="SOMETIMES">
+         <children>
+            <TextField fx:id="Texto" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#teclaPresionada" onKeyReleased="#teclaSuelta" prefHeight="68.0" prefWidth="600.0" style="-fx-border-color: white; -fx-border-width: 2px;" text="Ingrese aqui el texto a buscar" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="307.0" prefWidth="547.0">
+         <children>
+            <TableView fx:id="lista" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="321.0" prefWidth="560.0" style="-fx-background-color: black;" VBox.vgrow="SOMETIMES">
+               <columns>
+                  <TableColumn maxWidth="1.7976931348623157E308" prefWidth="142.85906499624252" text="CI" />
+                  <TableColumn prefWidth="82.918212890625" text="NOMBRE" />
+                  <TableColumn prefWidth="74.92604064941406" text="APELLIDO" />
+                  <TableColumn prefWidth="107.8935546875" text="EMAIL" />
+                  <TableColumn prefWidth="167.83439961412853" text="DIRECCION" />
+               </columns>
+            </TableView>
+         </children>
+         <VBox.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+</VBox>
