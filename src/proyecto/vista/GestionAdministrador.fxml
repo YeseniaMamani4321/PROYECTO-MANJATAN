@@ -10,25 +10,17 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane prefHeight="765.0" prefWidth="1344.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.controlador.GestionAdministradorController">
+<ScrollPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.controlador.GestionAdministradorController">
    <content>
       <AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="951.0" prefWidth="1307.0" style="-fx-background-color: #353354;">
          <children>
-            <Label alignment="TOP_CENTER" layoutX="207.0" layoutY="61.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="721.0" text="BOUTIQUE ALEX PLACE " textFill="WHITE" AnchorPane.bottomAnchor="591.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="61.0">
-               <font>
-                  <Font name="Forte" size="64.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="186.0" fitWidth="268.0" layoutX="-35.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../ProyectoImagenes/playboy-logo-blanco_Mesa-de-trabajo-1_1.png" />
-               </image>
-            </ImageView>
-            <AnchorPane layoutX="2.0" layoutY="193.0" prefHeight="566.0" prefWidth="1014.0" style="-fx-background-color: #252440;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="193.0">
+            <HBox prefHeight="937.0" prefWidth="1292.0" AnchorPane.bottomAnchor="13.986199882456503" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.985214159774614" AnchorPane.topAnchor="0.0">
                <children>
-                  <TabPane fx:id="ventana_seleccion" layoutX="-3.0" prefHeight="559.0" prefWidth="736.0" style="-fx-background-color: #2d2c55;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="0.0">
+                  <TabPane fx:id="ventana_seleccion" prefHeight="559.0" prefWidth="736.0" style="-fx-background-color: #2d2c55;" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
                       <Tab fx:id="VentanaRegistrar" text="REGISTRAR ADMINISTRADOR">
                            <content>
@@ -100,13 +92,13 @@
                                                 <content>
                                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                          <children>
-                                                            <Label alignment="CENTER" layoutX="81.0" layoutY="115.0" text="INGRESE NUEVO CARNET" textFill="WHITE" AnchorPane.bottomAnchor="347.0" AnchorPane.leftAnchor="81.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="115.0">
+                                                            <Label alignment="CENTER" layoutX="133.0" layoutY="88.0" text="INGRESE NUEVO CARNET" textFill="WHITE" AnchorPane.bottomAnchor="374.0" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="88.0">
                                                                <font>
                                                                   <Font size="27.0" />
                                                                </font>
                                                             </Label>
                                                             <TextField fx:id="NuevoCarnet" alignment="CENTER" layoutX="266.0" layoutY="327.0" prefHeight="36.0" prefWidth="242.0" />
-                                                            <Button alignment="CENTER" layoutX="305.0" layoutY="478.0" mnemonicParsing="false" onMouseClicked="#ActualizarCarnet" text=" ACTUALIZAR CARNET" />
+                                                            <Button alignment="CENTER" layoutX="304.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#ActualizarCarnet" text=" ACTUALIZAR CARNET" />
                                                          </children>
                                                       </AnchorPane>
                                                 </content>
@@ -115,13 +107,13 @@
                                                 <content>
                                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                          <children>
-                                                            <Label layoutX="215.0" layoutY="252.0" prefHeight="34.0" prefWidth="339.0" text="INGRESE NUEVO NOMBRE" textFill="WHITE" AnchorPane.bottomAnchor="405.0" AnchorPane.leftAnchor="215.0" AnchorPane.rightAnchor="244.0" AnchorPane.topAnchor="252.0">
+                                                            <Label layoutX="218.0" layoutY="205.0" prefHeight="218.0" prefWidth="389.0" text="INGRESE NUEVO NOMBRE" textFill="WHITE" AnchorPane.bottomAnchor="452.0" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="129.0" AnchorPane.topAnchor="205.0">
                                                                <font>
                                                                   <Font size="27.0" />
                                                                </font>
                                                             </Label>
                                                             <TextField fx:id="NuevoNombre" layoutX="289.0" layoutY="340.0" prefHeight="38.0" prefWidth="187.0" />
-                                                            <Button layoutX="310.0" layoutY="455.0" mnemonicParsing="false" onMouseClicked="#ActualizarNombre" text="ACTUALIZAR NOMBRE" />
+                                                            <Button layoutX="299.0" layoutY="406.0" mnemonicParsing="false" onMouseClicked="#ActualizarNombre" text="ACTUALIZAR NOMBRE" />
                                                          </children>
                                                       </AnchorPane>
                                                 </content>
@@ -130,13 +122,13 @@
                                                   <content>
                                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                          <children>
-                                                            <Button layoutX="300.0" layoutY="530.0" mnemonicParsing="false" onMouseClicked="#ActualizarTelefono" text="ACTUALIZAR TELEFONO" />
-                                                            <Label layoutX="188.0" layoutY="252.0" prefHeight="39.0" prefWidth="408.0" text="INGRESE NUEVO TELEFONO" textFill="WHITE" AnchorPane.bottomAnchor="405.0" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="240.0" AnchorPane.topAnchor="252.0">
+                                                            <Button layoutX="300.0" layoutY="417.0" mnemonicParsing="false" onMouseClicked="#ActualizarTelefono" text="ACTUALIZAR TELEFONO" />
+                                                            <Label layoutX="188.0" layoutY="216.0" prefHeight="218.0" prefWidth="415.0" text="INGRESE NUEVO TELEFONO" textFill="WHITE" AnchorPane.bottomAnchor="441.0" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="216.0">
                                                                <font>
                                                                   <Font size="27.0" />
                                                                </font>
                                                             </Label>
-                                                            <TextField fx:id="NuevoTelefono" layoutX="299.0" layoutY="349.0" prefHeight="39.0" prefWidth="172.0" />
+                                                            <TextField fx:id="NuevoTelefono" layoutX="299.0" layoutY="357.0" prefHeight="39.0" prefWidth="172.0" />
                                                          </children>
                                                       </AnchorPane>
                                                   </content>
@@ -150,7 +142,7 @@
                                                                   <Font size="27.0" />
                                                                </font>
                                                             </Label>
-                                                            <Button layoutX="322.0" layoutY="513.0" mnemonicParsing="false" onMouseClicked="#ActualizarDireccion" text="ACTUALIZAR DIRECCIÓN" />
+                                                            <Button layoutX="322.0" layoutY="420.0" mnemonicParsing="false" onMouseClicked="#ActualizarDireccion" text="ACTUALIZAR DIRECCIÓN" />
                                                             <TextField fx:id="NuevaDireccion" layoutX="321.0" layoutY="348.0" prefHeight="38.0" prefWidth="178.0" />
                                                          </children>
                                                       </AnchorPane>
@@ -160,14 +152,14 @@
                                                   <content>
                                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                          <children>
-                                                            <PasswordField fx:id="NuevaContraseña" layoutX="280.0" layoutY="297.0" prefHeight="36.0" prefWidth="194.0" AnchorPane.bottomAnchor="363.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="324.0" AnchorPane.topAnchor="297.0" />
-                                                            <Button layoutX="279.0" layoutY="468.0" mnemonicParsing="false" onMouseClicked="#ActualizarContraseña" text="ACTUALIZAR CONTRASEÑA" />
+                                                            <PasswordField fx:id="NuevaContraseña" layoutX="270.0" layoutY="251.0" prefHeight="31.0" prefWidth="211.0" AnchorPane.bottomAnchor="593.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="255.0" AnchorPane.topAnchor="251.0" />
+                                                            <Button layoutX="279.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#ActualizarContraseña" text="ACTUALIZAR CONTRASEÑA" />
                                                             <Label layoutX="176.0" layoutY="204.0" text="INGRESE NUEVA CONTRASEÑA" textFill="WHITE">
                                                                <font>
                                                                   <Font size="27.0" />
                                                                </font>
                                                             </Label>
-                                                            <ImageView fx:id="vistaContraseñaModificacion" accessibleRole="BUTTON" fitHeight="54.0" fitWidth="86.0" layoutX="513.0" layoutY="288.0" onMouseClicked="#mostrarContraseñaModificacion" pickOnBounds="true" preserveRatio="true">
+                                                            <ImageView fx:id="vistaContraseñaModificacion" accessibleRole="BUTTON" fitHeight="54.0" fitWidth="86.0" layoutX="499.0" layoutY="239.0" onMouseClicked="#mostrarContraseñaModificacion" pickOnBounds="true" preserveRatio="true">
                                                                <image>
                                                                   <Image url="@../../ProyectoImagenes/6405909.png" />
                                                                </image>
@@ -186,41 +178,45 @@
                         </Tab>
                     </tabs>
                   </TabPane>
-                  <Label layoutX="900.0" layoutY="34.0" text="DATOS ADMINISTRADOR" textFill="WHITE">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Label>
-                  <AnchorPane layoutX="832.0" layoutY="81.0" prefHeight="670.0" prefWidth="500.0">
+                  <VBox prefHeight="200.0" prefWidth="100.0">
                      <children>
-                        <Label layoutX="28.0" layoutY="61.0" prefHeight="39.0" prefWidth="97.0" text="CARNET" textFill="#9e9e9e">
+                        <Label text="DATOS ADMINISTRADOR" textFill="WHITE">
                            <font>
-                              <Font size="20.0" />
+                              <Font size="27.0" />
                            </font>
                         </Label>
-                        <Label layoutX="28.0" layoutY="355.0" prefHeight="39.0" prefWidth="119.0" text="DIRECCIÓN" textFill="#9e9e9e">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="28.0" layoutY="250.0" prefHeight="39.0" prefWidth="97.0" text="TELEFONO" textFill="#9e9e9e">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="28.0" layoutY="156.0" prefHeight="39.0" prefWidth="97.0" text="NOMBRE" textFill="#9e9e9e">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="DatosCarnet" layoutX="165.0" layoutY="61.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
-                        <Label fx:id="DatosNombre" layoutX="165.0" layoutY="156.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
-                        <Label fx:id="DatosTelefono" layoutX="165.0" layoutY="250.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
-                        <Label fx:id="DatosDireccion" layoutX="165.0" layoutY="355.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
+                        <AnchorPane prefHeight="670.0" prefWidth="500.0">
+                           <children>
+                              <Label layoutX="28.0" layoutY="61.0" prefHeight="39.0" prefWidth="97.0" text="CARNET" textFill="#9e9e9e">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="28.0" layoutY="355.0" prefHeight="39.0" prefWidth="119.0" text="DIRECCIÓN" textFill="#9e9e9e">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="28.0" layoutY="250.0" prefHeight="39.0" prefWidth="98.0" text="TELEFONO" textFill="#9e9e9e">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="28.0" layoutY="156.0" prefHeight="39.0" prefWidth="97.0" text="NOMBRE" textFill="#9e9e9e">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="DatosCarnet" layoutX="165.0" layoutY="61.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
+                              <Label fx:id="DatosNombre" layoutX="165.0" layoutY="156.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
+                              <Label fx:id="DatosTelefono" layoutX="165.0" layoutY="250.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
+                              <Label fx:id="DatosDireccion" layoutX="165.0" layoutY="355.0" prefHeight="39.0" prefWidth="317.0" style="-fx-background-color: #2d2c55;" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
                      </children>
-                  </AnchorPane>
+                  </VBox>
                </children>
-            </AnchorPane>
+            </HBox>
          </children>
       </AnchorPane>
    </content>

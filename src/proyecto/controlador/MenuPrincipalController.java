@@ -6,11 +6,12 @@ package proyecto.controlador;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.AnchorPane;
 import proyecto.modelo.BaseDeDatos;
 import proyecto.modelo.Entidades.Administrador;
 import proyecto.vista.AbridorVentanas;
@@ -20,8 +21,10 @@ import proyecto.vista.AbridorVentanas;
  * @author jhamilr
  */
 public class MenuPrincipalController implements Initializable {
+
     @FXML
-    private Pane ventana;
+    private AnchorPane ventana;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
@@ -31,21 +34,75 @@ public class MenuPrincipalController implements Initializable {
     void abrir_ventana_proveedores(MouseEvent event) {
         AbridorVentanas<VentanaProveedorController> abrirVentana = new AbridorVentanas<>("/proyecto/vista/VentanaProveedor.fxml");
         ventana.getChildren().add(abrirVentana.getFxml());
-        //abrirVentana.abrirVentana("proveedores");
+
     }
 
     @FXML
     void abrir_gestor_administrador(MouseEvent event) {
-        Administrador administrador_modificable=new Administrador();
-        BaseDeDatos<Administrador>baseDeDatos=new BaseDeDatos<>(administrador_modificable);
-        administrador_modificable=baseDeDatos.ListaObjetos().get(0);
-        AbridorVentanas<GestionAdministradorController> abridorVentanas = new AbridorVentanas<>("/proyecto/vista/GestionAdministrador.fxml");
-        abridorVentanas.getControlador().getVentanaRegistrar().setDisable(true);
-        abridorVentanas.getControlador().setAdministrador(administrador_modificable);
-        Tab ventana_modificar=abridorVentanas.getControlador().getVentanaModificar();
-        ventana_modificar.setDisable(false);
-        abridorVentanas.getControlador().getVentana_seleccion().getSelectionModel().select(ventana_modificar);
-        ventana.getChildren().add(abridorVentanas.getFxml());
+        abrir_ventana_administrador();
     }
 
+    @FXML
+    void agregar_proveedor(ActionEvent event) {
+
+    }
+
+    @FXML
+    void eliminar_producto(ActionEvent event) {
+
+    }
+
+    @FXML
+    void eliminar_proeveedor(ActionEvent event) {
+
+    }
+
+    @FXML
+    void modificar_producto(ActionEvent event) {
+
+    }
+
+    @FXML
+    void modificar_proveedor(ActionEvent event) {
+
+    }
+
+    @FXML
+    void modificar_administrador(ActionEvent event) {
+        abrir_ventana_administrador();
+    }
+
+    @FXML
+    void registrar_producto(ActionEvent event) {
+
+    }
+
+    @FXML
+    void salir_sistema(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ver_lista_productos(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ver_lista_proveedor(ActionEvent event) {
+
+    }
+
+    public void abrir_ventana_administrador() {
+        AbridorVentanas<GestionAdministradorController> VentanaAdministrador = new AbridorVentanas<>("/proyecto/vista/GestionAdministrador.fxml");
+        Administrador administrador_modificable = new Administrador();
+        BaseDeDatos<Administrador> baseDeDatosadministrador = new BaseDeDatos<>(administrador_modificable);
+        administrador_modificable = baseDeDatosadministrador.ListaObjetos().get(0);
+        VentanaAdministrador.getControlador().getVentanaRegistrar().setDisable(true);
+        VentanaAdministrador.getControlador().setAdministrador(administrador_modificable);
+        Tab ventana_modificar = VentanaAdministrador.getControlador().getVentanaModificar();
+        ventana_modificar.setDisable(false);
+        VentanaAdministrador.getControlador().getVentana_seleccion().getSelectionModel().select(ventana_modificar);
+        ventana.getChildren().add(VentanaAdministrador.getFxml());
+        baseDeDatosadministrador.close();
+    }
 }

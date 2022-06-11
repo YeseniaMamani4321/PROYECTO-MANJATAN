@@ -3,17 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/controlador/GestionAdministradorController.java</file>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/vista/AbridorVentanas.java</file>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/modelo/Entidades/Cliente.java</file>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/controlador/MENUController.java</file>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/vista/Clientes.fxml</file>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/controlador/ClientesController.java</file>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/principal/Principal.java</file>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/vista/GestionAdministrador.fxml</file>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/modelo/BaseDeDatos.java</file>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/modelo/Entidades/Administrador.java</file>
-            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO%20MAYO/src/proyecto/controlador/InicioSesionController.java</file>
+            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO-MANJATAN-master/src/proyecto/modelo/BaseDeDatos.java</file>
+            <file>file:/home/jhamilr/NetBeansProjects/PROYECTO-MANJATAN-master/src/proyecto/vista/MenuPrincipal.fxml</file>
         </group>
     </open-files>
 </project-private>

@@ -4,16 +4,20 @@
  */
 package proyecto.modelo.Entidades;
 
+import Logica.Impresion;
+import Logica.Libreria;
+
 /**
  *
  * @author jhamilr
  */
-public class Proveedor {
+public class Proveedor implements Impresion  {
     private String ci;
     private String nombre;
     private String apellido;
     private String direccion;
     private String gmail;
+    private int telefono;
 
     public String getCi() {
         return ci;
@@ -53,6 +57,25 @@ public class Proveedor {
 
     public void setGmail(String gmail) {
         this.gmail = gmail;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    @Override
+    public String imprimible() {
+    return Libreria.getCharacteristics(false,"PROVEEDOR",
+                           "ci:        "+this.ci,
+                           "nombre:    "+this.nombre,
+                           "apellido:  "+this.apellido,
+                           "direccion: "+this.direccion,
+                           "telefono:  "+this.telefono,
+                           "gmail:     "+this.gmail);
     }
     
 }

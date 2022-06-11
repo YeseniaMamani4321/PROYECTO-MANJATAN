@@ -60,8 +60,6 @@ public class BaseDeDatos<Objeto> {
             }else{
               atributo_objeto.set(objeto, valor);  
             }
-            
-            System.out.println("");
             PreparedStatement ps = conexion.prepareStatement(sql);
             ps.execute();
         } catch (IllegalArgumentException | IllegalAccessException | SQLException | NoSuchFieldException | SecurityException ex) {
@@ -178,5 +176,18 @@ public class BaseDeDatos<Objeto> {
            } catch (SQLException ex) {
             
            }
+    }
+    public void eliminarObjetoBaseDeDatos() throws SQLException{
+        try {
+            Field atributo=objeto.getClass().getDeclaredFields()[0];
+            atributo.setAccessible(true);
+            String sql = "DELETE FROM "+objeto.getClass().getSimpleName().toUpperCase()+" WHERE "+atributo.getName()+" = '"+atributo.get(objeto)+"'";
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.execute();
+        } catch (IllegalArgumentException | IllegalAccessException ex) {
+            Logger.getLogger(BaseDeDatos.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+       
     }
 }
