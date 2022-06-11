@@ -1,4 +1,2 @@
-/dist/*
-/build/*
-/src/proyecto/modelo/Conexion.java
-
+dist
+build
