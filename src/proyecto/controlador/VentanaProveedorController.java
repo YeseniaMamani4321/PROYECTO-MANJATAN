@@ -16,6 +16,8 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
@@ -89,6 +91,19 @@ public class VentanaProveedorController implements Initializable {
 
     @FXML
     private TextField telefono_registro_proveedor;
+    @FXML
+    private Tab proveedor_agregar;
+
+    @FXML
+    private Tab proveedor_eliminar;
+
+    @FXML
+    private Tab proveedor_modificar;
+
+    @FXML
+    private Tab proveedores_ver;
+    @FXML
+    private TabPane proveedores_ventana;
     @FXML
     private TableView<?> ListaProveedor;
 
@@ -315,4 +330,46 @@ public class VentanaProveedorController implements Initializable {
     
 }
 
+    public Tab getProveedor_agregar() {
+        return proveedor_agregar;
+    }
+
+    public void setProveedor_agregar(Tab proveedor_agregar) {
+        this.proveedor_agregar = proveedor_agregar;
+    }
+
+    public Tab getProveedor_eliminar() {
+        return proveedor_eliminar;
+    }
+
+    public void setProveedor_eliminar(Tab proveedor_eliminar) {
+        this.proveedor_eliminar = proveedor_eliminar;
+    }
+
+    public Tab getProveedor_modificar() {
+        return proveedor_modificar;
+    }
+
+    public void setProveedor_modificar(Tab proveedor_modificar) {
+        this.proveedor_modificar = proveedor_modificar;
+    }
+
+    public Tab getProveedores_ver() {
+        return proveedores_ver;
+    }
+
+    public void setProveedores_ver(Tab proveedores_ver) {
+        this.proveedores_ver = proveedores_ver;
+    }
+
+    public TabPane getProveedores_ventana() {
+        return proveedores_ventana;
+    }
+
+    public void setProveedores_ventana(TabPane proveedores_ventana) {
+        this.proveedores_ventana = proveedores_ventana;
+    }
+
+    
+   
 }

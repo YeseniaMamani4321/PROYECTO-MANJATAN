@@ -29,9 +29,9 @@
                            <children>
                               <BorderPane layoutY="-2.0" prefHeight="733.0" prefWidth="835.0">
                                  <top>
-                                    <TabPane prefHeight="700.0" prefWidth="835.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                    <TabPane fx:id="proveedores_ventana" prefHeight="700.0" prefWidth="835.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
                                       <tabs>
-                                        <Tab text="AGREGAR PROVEEDOR">
+                                        <Tab fx:id="proveedor_agregar" text="AGREGAR PROVEEDOR">
                                              <content>
                                                 <AnchorPane prefHeight="541.0" prefWidth="743.0">
                                                    <children>
@@ -76,7 +76,7 @@
                                                 </AnchorPane>
                                              </content>
                                           </Tab>
-                                        <Tab text="MODIFICAR PROVEEDOR">
+                                        <Tab fx:id="proveedor_modificar" text="MODIFICAR PROVEEDOR">
                                              <content>
                                                 <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                                    <children>
@@ -220,7 +220,7 @@
                                                 </AnchorPane>
                                              </content>
                                           </Tab>
-                                          <Tab text="ELIMINAR PROVEEDOR">
+                                          <Tab fx:id="proveedor_eliminar" text="ELIMINAR PROVEEDOR">
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
@@ -240,7 +240,7 @@
                                                 </AnchorPane>
                                             </content>
                                           </Tab>
-                                          <Tab onSelectionChanged="#cargar_lista" text="VER LISTA PROVEEDOR">
+                                          <Tab fx:id="proveedores_ver" onSelectionChanged="#cargar_lista" text="VER LISTA PROVEEDOR">
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>

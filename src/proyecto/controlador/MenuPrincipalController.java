@@ -44,7 +44,13 @@ public class MenuPrincipalController implements Initializable {
 
     @FXML
     void agregar_proveedor(ActionEvent event) {
-
+        AbridorVentanas<VentanaProveedorController> abrirVentana = new AbridorVentanas<>("/proyecto/vista/VentanaProveedor.fxml");
+         abrirVentana.getControlador().getProveedores_ventana()
+                 .getSelectionModel()
+                 .select(abrirVentana
+                         .getControlador()
+                         .getProveedor_agregar());
+         ventana.getChildren().add(abrirVentana.getFxml());
     }
 
     @FXML
@@ -54,7 +60,14 @@ public class MenuPrincipalController implements Initializable {
 
     @FXML
     void eliminar_proeveedor(ActionEvent event) {
-
+         AbridorVentanas<VentanaProveedorController> abrirVentana = new AbridorVentanas<>("/proyecto/vista/VentanaProveedor.fxml");
+         abrirVentana.getControlador().getProveedores_ventana()
+                 .getSelectionModel()
+                 .select(abrirVentana
+                         .getControlador()
+                         .getProveedor_eliminar());
+         ventana.getChildren().add(abrirVentana.getFxml());
+       
     }
 
     @FXML
@@ -64,7 +77,13 @@ public class MenuPrincipalController implements Initializable {
 
     @FXML
     void modificar_proveedor(ActionEvent event) {
-
+        AbridorVentanas<VentanaProveedorController> abrirVentana = new AbridorVentanas<>("/proyecto/vista/VentanaProveedor.fxml");
+         abrirVentana.getControlador().getProveedores_ventana()
+                 .getSelectionModel()
+                 .select(abrirVentana
+                         .getControlador()
+                         .getProveedor_modificar());
+         ventana.getChildren().add(abrirVentana.getFxml());
     }
 
     @FXML
@@ -89,6 +108,13 @@ public class MenuPrincipalController implements Initializable {
 
     @FXML
     void ver_lista_proveedor(ActionEvent event) {
+        AbridorVentanas<VentanaProveedorController> abrirVentana = new AbridorVentanas<>("/proyecto/vista/VentanaProveedor.fxml");
+         abrirVentana.getControlador().getProveedores_ventana()
+                 .getSelectionModel()
+                 .select(abrirVentana
+                         .getControlador()
+                         .getProveedores_ver());
+         ventana.getChildren().add(abrirVentana.getFxml());
 
     }
 
