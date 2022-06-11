@@ -16,8 +16,8 @@ public class Conexion {
  Connection con;
     public Connection getConnection(){
         try{
-            String myBD = "jdbc:mariadb://localhost:3033/PROYECTO _FINAL_PROGRAMACION";
-            con = DriverManager.getConnection(myBD,"root","sopadegato123");
+            String myBD = "jdbc:mariadb://localhost:3306/PROYECTO _FINAL_PROGRAMACION";
+            con = DriverManager.getConnection(myBD,"root","");
             return con;
         }catch (SQLException e){
             System.out.print(e.toString());                  
