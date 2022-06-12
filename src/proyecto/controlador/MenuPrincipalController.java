@@ -52,7 +52,11 @@ public class MenuPrincipalController implements Initializable {
                          .getProveedor_agregar());
          ventana.getChildren().add(abrirVentana.getFxml());
     }
-
+     @FXML
+    void abrir_ventana_productos(MouseEvent event) {
+        AbridorVentanas<VentanaProveedorController> abrirVentana = new AbridorVentanas<>("/proyecto/vista/GestionProductos.fxml");
+        ventana.getChildren().add(abrirVentana.getFxml());
+    }
     @FXML
     void eliminar_producto(ActionEvent event) {
 

@@ -15,7 +15,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import proyecto.controlador.InicioSesionController;
 import proyecto.modelo.BaseDeDatos;
-import proyecto.modelo.Entidades.Cliente;
+
 import proyecto.modelo.Entidades.Administrador;
 import proyecto.vista.LibreriaGrafica;
 

@@ -8,10 +8,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.function.UnaryOperator;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,7 +17,6 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -215,6 +211,7 @@ public class VentanaProveedorController implements Initializable {
     @FXML
     void agregarproveedor(MouseEvent event
     ) {
+        try{
         Proveedor proveedor_agregable = new Proveedor();
         proveedor_agregable.setCi(carnet_registro_proveedor.getText());
         proveedor_agregable.setApellido(apellido_registro_proveedor.getText());
@@ -228,6 +225,8 @@ public class VentanaProveedorController implements Initializable {
             limpiarPantallaRegistro();
         } else {
             new LibreriaGrafica().MostrarError("su correo no cincide con el formato");
+        }}catch(Exception es){
+             new LibreriaGrafica().MostrarError("el guardado de este proveedor no es valido\n verifique que el carnet no sea duplicado\n verifique que todos los campos esten llenos ");
         }
 
     }

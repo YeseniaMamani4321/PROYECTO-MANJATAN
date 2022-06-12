@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyecto.controlador.GestionProductoController">
    <content>
       <AnchorPane prefHeight="744.0" prefWidth="1166.0" style="-fx-background-color: #5a61bd;">
          <children>
@@ -65,13 +65,13 @@
                               <Font name="Forte" size="20.0" />
                            </font>
                         </Label>
-                        <Label layoutX="107.0" layoutY="386.0" prefHeight="31.0" prefWidth="335.0" style="-fx-background-color: #5a61bd;" />
-                        <Label layoutX="169.0" layoutY="327.0" prefHeight="31.0" prefWidth="273.0" style="-fx-background-color: #5a61bd;" />
-                        <Label layoutX="225.0" layoutY="260.0" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #5a61bd;" />
-                        <Label layoutX="224.0" layoutY="188.0" prefHeight="31.0" prefWidth="216.0" style="-fx-background-color: #5a61bd;" />
-                        <Label layoutX="107.0" layoutY="447.0" prefHeight="31.0" prefWidth="335.0" style="-fx-background-color: #5a61bd;" />
-                        <Label layoutX="106.0" layoutY="518.0" prefHeight="31.0" prefWidth="336.0" style="-fx-background-color: #5a61bd;" />
-                        <Button layoutX="185.0" layoutY="589.0" mnemonicParsing="false" style="-fx-background-color: #5a61bd;" text="ESCANEAR CODIGO QR" />
+                        <Label fx:id="marca_escaneado" layoutX="107.0" layoutY="386.0" prefHeight="31.0" prefWidth="335.0" style="-fx-background-color: #5a61bd;" />
+                        <Label fx:id="descripcion_escaneado" layoutX="169.0" layoutY="327.0" prefHeight="31.0" prefWidth="273.0" style="-fx-background-color: #5a61bd;" />
+                        <Label fx:id="nombre_escaneado" layoutX="225.0" layoutY="260.0" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #5a61bd;" />
+                        <Label fx:id="codigo_scaneado" layoutX="224.0" layoutY="188.0" prefHeight="31.0" prefWidth="216.0" style="-fx-background-color: #5a61bd;" />
+                        <Label fx:id="precio_escaneado" layoutX="107.0" layoutY="447.0" prefHeight="31.0" prefWidth="335.0" style="-fx-background-color: #5a61bd;" />
+                        <Label fx:id="stock_escaneado" layoutX="106.0" layoutY="518.0" prefHeight="31.0" prefWidth="336.0" style="-fx-background-color: #5a61bd;" />
+                        <Button layoutX="185.0" layoutY="589.0" mnemonicParsing="false" onMouseClicked="#escanear_codigo_qr" style="-fx-background-color: #5a61bd;" text="ESCANEAR CODIGO QR" />
                      </children>
                   </AnchorPane>
                </right>
@@ -80,17 +80,12 @@
                      <children>
                         <TabPane prefHeight="684.0" prefWidth="683.0" tabClosingPolicy="UNAVAILABLE">
                           <tabs>
-                            <Tab style="-fx-background-color: #9ca2ef;" text="AGREGAR  PRODUCTO">
+                            <Tab fx:id="agregar_producto" style="-fx-background-color: #9ca2ef;" text="AGREGAR  PRODUCTO">
                                  <content>
                                     <BorderPane prefHeight="200.0" prefWidth="200.0">
                                        <center>
                                           <AnchorPane prefHeight="571.0" prefWidth="572.0" style="-fx-background-color: #9ca2ef;" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Label layoutX="21.0" layoutY="54.0" text="CODIGO PRODUCTO">
-                                                   <font>
-                                                      <Font name="Forte" size="20.0" />
-                                                   </font>
-                                                </Label>
                                                 <Label layoutX="21.0" layoutY="102.0" text="NOMBRE PRODUCTO">
                                                    <font>
                                                       <Font name="Forte" size="20.0" />
@@ -116,18 +111,17 @@
                                                       <Font name="Forte" size="20.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField layoutX="230.0" layoutY="54.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
-                                                <TextField layoutX="230.0" layoutY="102.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
-                                                <TextField layoutX="230.0" layoutY="209.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
-                                                <TextField layoutX="230.0" layoutY="262.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
-                                                <TextField layoutX="230.0" layoutY="315.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
-                                                <TextField layoutX="230.0" layoutY="157.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
-                                                <Button layoutX="211.0" layoutY="450.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="151.0" style="-fx-background-color: #7178df;" text="AGREGAR EL PRODUCTO" />
+                                                <TextField fx:id="registro_nombre_producto" layoutX="230.0" layoutY="102.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
+                                                <TextField fx:id="registro_marca_producto" layoutX="230.0" layoutY="209.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
+                                                <TextField fx:id="registro_precio_producto" layoutX="230.0" layoutY="262.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
+                                                <TextField fx:id="registro_stock_producto" layoutX="230.0" layoutY="315.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
+                                                <TextField fx:id="registro_descripcion_producto" layoutX="230.0" layoutY="157.0" prefHeight="25.0" prefWidth="314.0" style="-fx-background-color: #7178df;" />
+                                                <Button layoutX="211.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#agregar_producto" prefHeight="30.0" prefWidth="194.0" style="-fx-background-color: #7178df;" text="AGREGAR EL PRODUCTO" />
                                              </children>
                                           </AnchorPane>
                                        </center>
                                        <top>
-                                          <Label prefHeight="47.0" prefWidth="302.0" text="AGREGUE UN PRODUCTO NUEVO" BorderPane.alignment="CENTER">
+                                          <Label prefHeight="48.0" prefWidth="352.0" text="AGREGUE UN PRODUCTO NUEVO" BorderPane.alignment="CENTER">
                                              <font>
                                                 <Font name="Forte" size="20.0" />
                                              </font>
@@ -145,17 +139,12 @@
                                     </BorderPane>
                                  </content>
                             </Tab>
-                            <Tab style="-fx-background-color: #9ca2ef;" text="MODIFICAR  PRODUCTO">
+                            <Tab fx:id="modificar_producto" style="-fx-background-color: #9ca2ef;" text="MODIFICAR  PRODUCTO">
                                  <content>
                                     <BorderPane prefHeight="200.0" prefWidth="200.0">
                                        <center>
                                           <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #9ca2ef;" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Label layoutX="30.0" layoutY="62.0" text="NUEVO CODIGO">
-                                                   <font>
-                                                      <Font name="Forte" size="20.0" />
-                                                   </font>
-                                                </Label>
                                                 <Label layoutX="24.0" layoutY="135.0" text="NUEVO NOMBRE">
                                                    <font>
                                                       <Font name="Forte" size="20.0" />
@@ -181,18 +170,16 @@
                                                       <Font name="Forte" size="20.0" />
                                                    </font>
                                                 </Label>
-                                                <TextField layoutX="29.0" layoutY="394.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
-                                                <TextField layoutX="29.0" layoutY="314.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
-                                                <TextField layoutX="29.0" layoutY="244.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
-                                                <TextField layoutX="29.0" layoutY="169.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
-                                                <TextField layoutX="29.0" layoutY="97.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
-                                                <TextField layoutX="29.0" layoutY="474.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
-                                                <Button layoutX="429.0" layoutY="97.0" mnemonicParsing="false" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
-                                                <Button layoutX="429.0" layoutY="169.0" mnemonicParsing="false" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
-                                                <Button layoutX="429.0" layoutY="244.0" mnemonicParsing="false" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
-                                                <Button layoutX="429.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
-                                                <Button layoutX="429.0" layoutY="394.0" mnemonicParsing="false" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
-                                                <Button layoutX="429.0" layoutY="474.0" mnemonicParsing="false" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
+                                                <TextField fx:id="nuevo_precio" layoutX="29.0" layoutY="394.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
+                                                <TextField fx:id="nueva_marca" layoutX="29.0" layoutY="314.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
+                                                <TextField fx:id="nueva_descripcion" layoutX="29.0" layoutY="244.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
+                                                <TextField fx:id="nuevo_nombre" layoutX="29.0" layoutY="169.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
+                                                <TextField fx:id="nuevo_stock" layoutX="29.0" layoutY="474.0" prefHeight="25.0" prefWidth="345.0" style="-fx-background-color: #7178df;" />
+                                                <Button layoutX="429.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#actualizar_nombre" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
+                                                <Button layoutX="429.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#actualizar_descripcion" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
+                                                <Button layoutX="429.0" layoutY="314.0" mnemonicParsing="false" onMouseClicked="#actualizar_marca" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
+                                                <Button layoutX="429.0" layoutY="394.0" mnemonicParsing="false" onMouseClicked="#actualizar_precio" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
+                                                <Button layoutX="429.0" layoutY="474.0" mnemonicParsing="false" onMouseClicked="#actualizar_stock" style="-fx-background-color: #5a61bd;" text="ACTUALIZAR" />
                                              </children>
                                           </AnchorPane>
                                        </center>
@@ -219,7 +206,7 @@
                                     </BorderPane>
                                  </content>
                             </Tab>
-                              <Tab style="-fx-background-color: #9ca2ef;" text="ELIMINAR  PRODUCTO">
+                              <Tab fx:id="eliminar_producto" style="-fx-background-color: #9ca2ef;" text="ELIMINAR  PRODUCTO">
                                  <content>
                                     <BorderPane prefHeight="200.0" prefWidth="200.0">
                                        <left>
@@ -256,7 +243,7 @@
                                     </BorderPane>
                                  </content>
                               </Tab>
-                              <Tab style="-fx-background-color: #9ca2ef;" text="VER  LISTA  PRODUCTO">
+                              <Tab fx:id="ver_lista_producto" style="-fx-background-color: #9ca2ef;" text="VER  LISTA  PRODUCTO">
                                  <content>
                                     <BorderPane prefHeight="200.0" prefWidth="200.0">
                                        <top>
@@ -289,7 +276,7 @@
                                     </BorderPane>
                                  </content>
                               </Tab>
-                              <Tab style="-fx-background-color: #9ca2ef;" text="GENERAR  QR  ">
+                              <Tab fx:id="generar_codigo_qr" style="-fx-background-color: #9ca2ef;" text="GENERAR  QR  ">
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
@@ -297,23 +284,23 @@
                                              <children>
                                                 <AnchorPane prefHeight="643.0" prefWidth="671.0">
                                                    <children>
-                                                      <TextField layoutX="212.0" layoutY="127.0" prefHeight="24.0" prefWidth="247.0" style="-fx-background-color: #7178df;" />
+                                                      <TextField fx:id="codigo_producto_qr" layoutX="212.0" layoutY="127.0" prefHeight="24.0" prefWidth="247.0" style="-fx-background-color: #7178df;" />
                                                       <Label layoutX="187.0" layoutY="59.0" text="INGRESE EL CODIGO PRODUCTO">
                                                          <font>
                                                             <Font name="Forte" size="20.0" />
                                                          </font>
                                                       </Label>
-                                                      <Button layoutX="251.0" layoutY="215.0" mnemonicParsing="false" style="-fx-background-color: #9ca2ef;" text="GENERAR CODIGO QR">
+                                                      <Button layoutX="251.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#generar_codigo_qr" style="-fx-background-color: #9ca2ef;" text="GENERAR CODIGO QR">
                                                          <font>
                                                             <Font size="15.0" />
                                                          </font>
                                                       </Button>
-                                                      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="261.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+                                                      <ImageView fx:id="codigo_qr_generado" fitHeight="150.0" fitWidth="200.0" layoutX="261.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../javafxapplication1/folder/85969.png" />
+                                                            <Image url="@../../ProyectoImagenes/85969.png" />
                                                          </image>
                                                       </ImageView>
-                                                      <Button layoutX="249.0" layoutY="517.0" mnemonicParsing="false" style="-fx-background-color: #9ca2ef;" text="GUARDAR CODIGO QR">
+                                                      <Button layoutX="249.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#guardar_codigo_qr" style="-fx-background-color: #9ca2ef;" text="GUARDAR CODIGO QR">
                                                          <font>
                                                             <Font size="15.0" />
                                                          </font>

@@ -258,7 +258,6 @@
                                                             </TableView>
                                                          </children>
                                                       </AnchorPane>
-                                                      <Button layoutX="367.0" layoutY="645.0" mnemonicParsing="false" onMouseClicked="#mostrar_lista_proveedores" text="MOSTRAR LISTA" />
                                                    </children>
                                                 </AnchorPane>
                                             </content>

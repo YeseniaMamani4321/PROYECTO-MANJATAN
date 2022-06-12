@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import proyecto.modelo.Entidades.Cliente;
+
 
 /**
  *
@@ -32,22 +32,20 @@ public class BaseDeDatos<Objeto> {
         conexion=new Conexion().getConnection();
     }
 
-    public void AgregarObjetoBaseDatos() {
-        try {
+    public void AgregarObjetoBaseDatos() throws Exception{
+       
             String sql = camposObjeto();
             sql = "INSERT INTO " + objeto.getClass().getSimpleName().toUpperCase() + " " + sql.toUpperCase() + " VALUES " + getCamposLlenados();
             PreparedStatement ps = conexion.prepareStatement(sql);
             ps.execute();
-        } catch (IllegalArgumentException | SQLException ex) {
-            ex.printStackTrace();
-        }
+        
          
     }
     public void ModificarValorBaseDeDatos(String nombreAtributo, String valor) throws Exception{
         if(valor.equals("")){
             throw new Exception();
         }
-        try {
+        
            Field atributo=objeto.getClass().getDeclaredFields()[0];
             atributo.setAccessible(true);
             String sql="UPDATE "+objeto.getClass().getSimpleName().toUpperCase()+
@@ -57,14 +55,16 @@ public class BaseDeDatos<Objeto> {
             atributo_objeto.setAccessible(true);
             if(atributo_objeto.get(objeto) instanceof Integer){
             atributo_objeto.set(objeto, Integer.parseInt(valor));
-            }else{
+            }else if(atributo_objeto.get(objeto) instanceof Double)
+            {
+                atributo_objeto.set(objeto, Double.parseDouble(valor));
+            }
+            else{
               atributo_objeto.set(objeto, valor);  
             }
             PreparedStatement ps = conexion.prepareStatement(sql);
             ps.execute();
-        } catch (IllegalArgumentException | IllegalAccessException | SQLException | NoSuchFieldException | SecurityException ex) {
-            Logger.getLogger(BaseDeDatos.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
         
         
     }
@@ -86,7 +86,11 @@ public class BaseDeDatos<Objeto> {
                     field.setAccessible(true);
                     if(field.get(entidad) instanceof Integer){
                     field.set(entidad,rs.getInt(field.getName().toUpperCase()));
-                    }else{
+                    }
+                    else if(field.get(entidad) instanceof Double){
+                    field.set(entidad,rs.getDouble(field.getName().toUpperCase()));
+                    }
+                    else{
                     field.set(entidad,rs.getString(field.getName().toUpperCase()));    
                     }
                 }
@@ -116,7 +120,10 @@ public class BaseDeDatos<Objeto> {
                     field.setAccessible(true);
                     if(field.get(entidad) instanceof Integer){
                     field.set(entidad,rs.getInt(field.getName().toUpperCase()));
-                    }else{
+                    }else if(field.get(entidad) instanceof Double){
+                    field.set(entidad,rs.getDouble(field.getName().toUpperCase()));
+                    }
+                    else{
                     field.set(entidad,rs.getString(field.getName().toUpperCase())); 
                     
                     }
@@ -189,5 +196,16 @@ public class BaseDeDatos<Objeto> {
         }
 
        
+    }
+    public void cambiarValorAutoIncremento(int valor){
+         try {
+            Field atributo=objeto.getClass().getDeclaredFields()[0];
+            atributo.setAccessible(true);
+            String sql = "ALTER TABLE "+objeto.getClass().getSimpleName().toUpperCase()+" AUTO_INCREMENT ="+ valor;
+            PreparedStatement ps = conexion.prepareStatement(sql);
+            ps.execute();
+         } catch (SQLException ex) {
+            Logger.getLogger(BaseDeDatos.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
