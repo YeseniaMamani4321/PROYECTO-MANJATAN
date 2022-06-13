@@ -86,6 +86,7 @@ public class InicioSesionController implements Initializable {
                 libreria.MostrarInformacion("Usuario o contraseña incorrectos");
             }else{
                 AbridorVentanas<MenuPrincipalController> abridorVentanas=new AbridorVentanas<>("/proyecto/vista/MenuPrincipal.fxml");
+                abridorVentanas.getControlador().setPrincipal(abridorVentanas.getVentana());
                 abridorVentanas.abrirVentana("Menu Principal");
                 principal.close();
             }

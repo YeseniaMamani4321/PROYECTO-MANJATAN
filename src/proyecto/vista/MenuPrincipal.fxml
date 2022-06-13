@@ -17,7 +17,7 @@
    <content>
       <AnchorPane id="AnchorPane" prefHeight="901.0" prefWidth="1286.0" style="-fx-background-color: #5a61bd;">
          <children>
-            <Button layoutX="-1.0" layoutY="193.0" mnemonicParsing="false" onMouseClicked="#abrir_gestor_administrador" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: #7178df;" textFill="WHITE">
+            <Button fx:id="boton_administrador" layoutX="-1.0" layoutY="193.0" mnemonicParsing="false" onMouseClicked="#abrir_gestor_administrador" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: #7178df;" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font>
@@ -29,7 +29,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button accessibleRole="IMAGE_VIEW" layoutX="-1.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#abrir_ventana_productos" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: #7178df;" textFill="WHITE">
+            <Button fx:id="boton_productos" accessibleRole="IMAGE_VIEW" layoutX="-1.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#abrir_ventana_productos" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: #7178df;" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font>
@@ -41,7 +41,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="-1.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#abrir_ventana_proveedores" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: #7178df;" textFill="WHITE">
+            <Button fx:id="boton_proveedor" layoutX="-1.0" layoutY="354.0" mnemonicParsing="false" onMouseClicked="#abrir_ventana_proveedores" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: #7178df;" textFill="WHITE">
                <font>
                   <Font size="27.0" />
                </font>
@@ -67,9 +67,9 @@
                   </Label>
                </children>
             </Pane>
-            <Button layoutX="-1.0" layoutY="516.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: #7178df;">
+            <Button layoutX="-1.0" layoutY="516.0" mnemonicParsing="false" onMouseClicked="#salir_sistema_menu" prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: #7178df;">
                <graphic>
-                  <ImageView accessibleRole="BUTTON" fitHeight="111.0" fitWidth="105.0" onMouseClicked="#salir_sistema" pickOnBounds="true" preserveRatio="true">
+                  <ImageView accessibleRole="BUTTON" fitHeight="111.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../ProyectoImagenes/56805.png" />
                      </image>
